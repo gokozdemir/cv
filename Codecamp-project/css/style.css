@@ -16,6 +16,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Title */
 
+.progress-container {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 8px;
+}
+
+.progress-bar {
+    height: 4px;
+    background: #1b8bf9;
+    width: 0%;
+}
 
 .container{
     padding: 1% 7% 5%;
@@ -30,6 +42,15 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #EAF5FE;
 }
 
+.background-image{
+    background-image: url(/Codecamp-project/images/parallax-bg/bg.png);
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #c0eaf5;
+    border-radius: 0 0 50% 50%/5rem 5rem 8rem 8rem;
+}
 
 .title-image-content{
     position: absolute;
@@ -150,14 +171,19 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     padding: 40px;
     position: relative;
-    bottom: 300px;
+    bottom: 200px;
     background-color: #fff;
-    margin-bottom: -250px;
+    margin-bottom: -200px;
+    margin-top: 0px;
 }
 
 @media (max-width:767px){
     .box-1{
         margin-bottom: 50px;
+    }
+
+    .box-2{
+        margin-top: 50px;
     }
 
     .cta ul{
@@ -169,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media(max-width:1046px){
     .box{
-        margin-top: 100px;
+        margin-top: 50px;
     }
     
 }
