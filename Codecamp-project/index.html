@@ -34,7 +34,23 @@
 </head>
 
 <body>
-  <div id="title">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar" style="width: 0%;"></div>
+  </div>
+  <script>
+    window.onscroll = function() {
+      myFunction()
+    };
+
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+  <div id="title" class=" background-image">
+    <div class=""></div>
     <div class="container">
       <header id="header">
         <div class="header-bar">
@@ -66,9 +82,6 @@
                 <input type="submit" class="btn btn-primary cta-submit" value="Call To Action">
               </div>
             </div>
-          </div>
-          <div class="col-md-6 title-image">
-            <img class="title-image-content" src="images/parallax-bg/bg.png" alt="title-image" />
           </div>
         </div>
 
@@ -147,10 +160,10 @@
                   <div class="divider-140"></div>
                   <div class="features container">
                     <div class="row">
-                      <div class="col-md-6 featured-image">
+                      <div class="col-md-7 featured-image">
                         <img src="images/featured-img-1.png" alt="">
                       </div>
-                      <div class="col-md-6 features">
+                      <div class="col-md-5 features">
                         <img src="images/section-title-icons/icon-1.png" alt="">
                         <h2>Best Web Solution</h2>
                         <p class="description">
@@ -162,7 +175,7 @@
                     </div>
                     <div class="divider-70"></div>
                     <div class="row">
-                      <div class="col-md-6 features-2">
+                      <div class="col-md-5 features-2">
                         <img src="images/section-title-icons/icon-2.png" alt="">
                         <h2>Save Your Money</h2>
                         <p class="description">
@@ -171,13 +184,11 @@
                           service. How can you benefit them?
                         </p>
                       </div>
-                      <div class="col-md-6 featured-image-2">
+                      <div class="col-md-7 featured-image-2">
                         <img src="images/featured-img-2.png" alt="">
                       </div>
                     </div>
                   </div>
-
-
                 </div>
               </div>
 
